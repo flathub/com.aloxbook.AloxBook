@@ -1,0 +1,37 @@
+app-id: com.aloxbook.AloxBook
+tags:
+  - proprietary
+runtime: org.freedesktop.Platform
+runtime-version: '25.08'
+sdk: org.freedesktop.Sdk
+command: AloxBook
+
+finish-args:
+  - --socket=x11
+  - --share=ipc
+  - --device=dri
+
+modules:
+  - name: aloxbook
+    buildsystem: simple
+    build-commands:
+      - mkdir -p /app/bin
+      - cp -a AloxBook *.so* /app/bin/
+      - install -Dm644 app_icon.png /app/share/icons/hicolor/256x256/apps/com.aloxbook.AloxBook.png
+      - install -Dm644 app_icon.png /app/share/icons/hicolor/256x256/mimetypes/com.aloxbook.AloxBook-x-aloxbook.png
+      - install -Dm644 com.aloxbook.AloxBook.desktop /app/share/applications/com.aloxbook.AloxBook.desktop
+      - install -Dm644 com.aloxbook.AloxBook.metainfo.xml /app/share/metainfo/com.aloxbook.AloxBook.metainfo.xml
+      - install -Dm644 com.aloxbook.AloxBook.mime.xml /app/share/mime/packages/com.aloxbook.AloxBook.mime.xml
+    sources:
+      - type: archive
+        only-arches:
+          - x86_64
+        url: https://www.aloxbook.com/downloads/flatpak/AloxBook-1.3.3-linux-x64.tar.xz
+        sha256: "2dffc54d1e0d94f9b7a2305d4b6a4b5535a2dd95bd69462579d263fcf96e9bfd"
+        strip-components: 0
+        x-checker-data:
+          type: json
+          url: https://www.aloxbook.com/releases/flathub-latest.json
+          version-query: .version
+          url-query: .url
+          is-main-source: true
