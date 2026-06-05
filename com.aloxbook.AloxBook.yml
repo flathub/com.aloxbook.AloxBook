@@ -26,8 +26,8 @@ modules:
       - type: archive
         only-arches:
           - x86_64
-        url: https://www.aloxbook.com/downloads/flatpak/AloxBook-1.5.0-linux-x64.tar.xz
-        sha256: 8ac9ba189178c0bb7f9f17a5b0556ce677ac1f46d7c4bb843e6645363624abf5
+        url: https://www.aloxbook.com/downloads/flatpak/AloxBook-1.6.0-linux-x64.tar.xz
+        sha256: 54564d8d169921979fdc2c11afc8e053f18212c25b9200074713ec6b2737aefa
         strip-components: 0
         x-checker-data:
           type: json
