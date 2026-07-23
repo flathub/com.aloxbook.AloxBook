@@ -7,7 +7,8 @@ sdk: org.freedesktop.Sdk
 command: AloxBook
 
 finish-args:
-  - --socket=x11
+  - --socket=wayland
+  - --socket=fallback-x11
   - --share=ipc
   - --device=dri
 
@@ -26,12 +27,24 @@ modules:
       - type: archive
         only-arches:
           - x86_64
-        url: https://www.aloxbook.com/downloads/flatpak/AloxBook-2.0.0-linux-x64.tar.xz
-        sha256: 897aef312ac0db0bc26534e6e8a77b1092391cf7ed73857723cf7f5d50f39f75
+        url: https://www.aloxbook.com/downloads/flatpak/AloxBook-2.1.0-linux-x64.tar.xz
+        sha256: 68ca0564a300814fe59d1f493ac19ac354170bdfc199b719e1dfbe82bd2bb5a2
         strip-components: 0
         x-checker-data:
           type: json
           url: https://www.aloxbook.com/releases/flathub-latest.json
           version-query: .version
-          url-query: .url
+          url-query: .sources.x86_64.url
           is-main-source: true
+
+      - type: archive
+        only-arches:
+          - aarch64
+        url: https://www.aloxbook.com/downloads/flatpak/AloxBook-2.1.0-linux-arm64.tar.xz
+        sha256: 9570d47ef015ec68e22701fd502d9e9000f01645a5bdbc76d51bddb55a5bf402
+        strip-components: 0
+        x-checker-data:
+          type: json
+          url: https://www.aloxbook.com/releases/flathub-latest.json
+          version-query: .version
+          url-query: .sources.aarch64.url
