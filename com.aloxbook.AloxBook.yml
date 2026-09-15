@@ -27,8 +27,8 @@ modules:
       - type: archive
         only-arches:
           - x86_64
-        url: https://www.aloxbook.com/downloads/flatpak/AloxBook-2.2.0-linux-x64.tar.xz
-        sha256: 2f4bb278667841836b4c1e77a48c803d4f6a8a4592003f144e14415df55cad46
+        url: https://www.aloxbook.com/downloads/flatpak/AloxBook-2.3.0-linux-x64.tar.xz
+        sha256: beefb5309162330cd8e5d53e8ce322051f8cce0d23d70d01a9836bf62ed1c22f
         strip-components: 0
         x-checker-data:
           type: json
@@ -40,8 +40,8 @@ modules:
       - type: archive
         only-arches:
           - aarch64
-        url: https://www.aloxbook.com/downloads/flatpak/AloxBook-2.2.0-linux-arm64.tar.xz
-        sha256: 8c73f2d7470d85c9cf37b46907e61f1b57c81baac67d2871b5d7d04127748a34
+        url: https://www.aloxbook.com/downloads/flatpak/AloxBook-2.3.0-linux-arm64.tar.xz
+        sha256: b356259bc518098205267447e92ca74647510ea0aef2ed53c4cbeef2101d8c55
         strip-components: 0
         x-checker-data:
           type: json
