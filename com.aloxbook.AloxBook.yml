@@ -2,7 +2,7 @@ app-id: com.aloxbook.AloxBook
 tags:
   - proprietary
 runtime: org.freedesktop.Platform
-runtime-version: '25.08'
+runtime-version: '26.08'
 sdk: org.freedesktop.Sdk
 command: AloxBook
 
@@ -18,6 +18,9 @@ modules:
     build-commands:
       - mkdir -p /app/bin
       - cp -a AloxBook *.so* /app/bin/
+      - install -Dm644 THIRD-PARTY-NOTICES.txt /app/share/doc/AloxBook/THIRD-PARTY-NOTICES.txt
+      - install -d /app/share/doc/AloxBook/ThirdPartyNotices
+      - install -m644 ThirdPartyNotices/* /app/share/doc/AloxBook/ThirdPartyNotices/
       - install -Dm644 app_icon.png /app/share/icons/hicolor/256x256/apps/com.aloxbook.AloxBook.png
       - install -Dm644 app_icon.png /app/share/icons/hicolor/256x256/mimetypes/com.aloxbook.AloxBook-x-aloxbook.png
       - install -Dm644 com.aloxbook.AloxBook.desktop /app/share/applications/com.aloxbook.AloxBook.desktop
@@ -27,8 +30,8 @@ modules:
       - type: archive
         only-arches:
           - x86_64
-        url: https://www.aloxbook.com/downloads/flatpak/AloxBook-2.3.0-linux-x64.tar.xz
-        sha256: beefb5309162330cd8e5d53e8ce322051f8cce0d23d70d01a9836bf62ed1c22f
+        url: https://www.aloxbook.com/downloads/flatpak/AloxBook-2.4.0-linux-x64.tar.xz
+        sha256: bb8e6aa63ac03d84ae49fa75a156f74510e2d1358f8dc45347e42b75ad8e5971
         strip-components: 0
         x-checker-data:
           type: json
@@ -40,8 +43,8 @@ modules:
       - type: archive
         only-arches:
           - aarch64
-        url: https://www.aloxbook.com/downloads/flatpak/AloxBook-2.3.0-linux-arm64.tar.xz
-        sha256: b356259bc518098205267447e92ca74647510ea0aef2ed53c4cbeef2101d8c55
+        url: https://www.aloxbook.com/downloads/flatpak/AloxBook-2.4.0-linux-arm64.tar.xz
+        sha256: cf282bb98f031c785c2bbd34eb1521321d4c8d70b97ea1b33c361d81a5dfef23
         strip-components: 0
         x-checker-data:
           type: json
