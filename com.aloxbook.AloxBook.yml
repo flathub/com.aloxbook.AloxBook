@@ -30,8 +30,8 @@ modules:
       - type: archive
         only-arches:
           - x86_64
-        url: https://www.aloxbook.com/downloads/flatpak/AloxBook-2.4.0-linux-x64.tar.xz
-        sha256: bb8e6aa63ac03d84ae49fa75a156f74510e2d1358f8dc45347e42b75ad8e5971
+        url: https://www.aloxbook.com/downloads/flatpak/AloxBook-2.5.0-linux-x64.tar.xz
+        sha256: e492dd5d14102f393b8783229a705558ff2d4128aefd52b01c2022de63878ef9
         strip-components: 0
         x-checker-data:
           type: json
@@ -43,8 +43,8 @@ modules:
       - type: archive
         only-arches:
           - aarch64
-        url: https://www.aloxbook.com/downloads/flatpak/AloxBook-2.4.0-linux-arm64.tar.xz
-        sha256: cf282bb98f031c785c2bbd34eb1521321d4c8d70b97ea1b33c361d81a5dfef23
+        url: https://www.aloxbook.com/downloads/flatpak/AloxBook-2.5.0-linux-arm64.tar.xz
+        sha256: e9587d1eb4c17afbe0a769372f1008f8559239ccc9b72f82126200db84bd9f7a
         strip-components: 0
         x-checker-data:
           type: json
